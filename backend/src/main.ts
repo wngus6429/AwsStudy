@@ -10,6 +10,6 @@ async function bootstrap() {
   });
 
   console.log(`Example app listening on port ${port}`);
-  await app.listen(80);
+  await app.listen(80, '0.0.0.0');
 }
 bootstrap();
