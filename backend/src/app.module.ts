@@ -2,9 +2,13 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true, // 어디서든 process.env 사용 가능
+    }),
     TypeOrmModule.forRoot({
       type: 'mysql', // 데이터베이스 유형
       host: 'localhost', // 데이터베이스 호스트

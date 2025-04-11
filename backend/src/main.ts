@@ -9,7 +9,7 @@ async function bootstrap() {
     credentials: true,
   });
 
-  console.log(`Example app listening on port ${port}`);
   await app.listen(80, '0.0.0.0');
+  console.log(`Example app listening on port ${port}`);
 }
 bootstrap();
