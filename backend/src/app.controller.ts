@@ -6,7 +6,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  getEnvTest(): string {
+    return `.env 테스트 : ${process.env.DATABASE_NAME}`;
   }
 }
